@@ -8,7 +8,7 @@ public class Pyramid {
     final int NUMBER_OF_COLUMNS = numberOfColumns(NUMBER_OF_LINES);
     String[][] emptyMatrix = matrixGenerator(NUMBER_OF_LINES, NUMBER_OF_COLUMNS);
     String[][] pyramidMatrix = pyramidMaker(emptyMatrix, NUMBER_OF_LINES);
-    printMatrix(pyramidMatrix, NUMBER_OF_LINES, NUMBER_OF_COLUMNS);
+    printMatrix(pyramidMatrix);
 
     }
     public static int intScanner(String consoleOutput){
@@ -48,9 +48,9 @@ public class Pyramid {
         return pyramidMatrix;
     }
 
-    public static void printMatrix(String[][] pyramidMatrix, int numberOfLines, int numberOfColumns){
-        for (int line = 0; line < numberOfLines; line++){
-            for(int column = 0; column < numberOfColumns; column++){
+    public static void printMatrix(String[][] pyramidMatrix){
+        for (int line = 0; line < pyramidMatrix.length; line++){
+            for(int column = 0; column < pyramidMatrix[line].length; column++){
                 System.out.print(pyramidMatrix[line][column]);
             }
             System.out.printf("\n");
